@@ -191,7 +191,7 @@ require('lazy').setup({
       'williamboman/mason-lspconfig.nvim',
 
       -- Useful status updates for LSP
-      'j-hui/fidget.nvim',
+      {'j-hui/fidget.nvim', tag = "legacy" },
     }
   },
 
@@ -221,7 +221,7 @@ require('lazy').setup({
 
   'navarasu/onedark.nvim', -- Theme inspired by Atom
   'nvim-lualine/lualine.nvim', -- Fancier statusline
-  'lukas-reineke/indent-blankline.nvim', -- Add indentation guides even on blank lines
+  { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {}}, -- Add indentation guides even on blank lines
   'numToStr/Comment.nvim', -- "gc" to comment visual regions/lines 
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   -- Fuzzy Finder (files, lsp, etc)
@@ -239,12 +239,8 @@ require('lazy').setup({
       -- refer to the configuration section below
     }
   },
-}
--- {
---   defaults = {
---     lazy = true,
---   }
--- }
-)
+  -- Noob plugin
+  { 'folke/which-key.nvim', opts ={}}
+})
 
 
